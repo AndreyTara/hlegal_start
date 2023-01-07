@@ -1,0 +1,357 @@
+// @import "./typography";
+// @import "./header";
+// @import "./uakit";
+$main: (
+	regular: #323264,
+	alt: #46466E,
+	soft: #686887,
+	text: #4B28DE
+);
+
+$accent: (
+	regular: #F0145A
+);
+
+$active: (
+	regular: #24A3FF,
+	hover: #0085FF,
+	active: #006CCF
+);
+
+$grey: (
+	regular: #F5F5FA,
+	alt: #EDEDF7,
+	text: #B3B3BA,
+	separator: #E6E6F0,
+);
+
+$gradient: (
+	regular: linear-gradient(128.63deg, map-get($main, regular) 0%, map-get($main, regular) 73.96%, #A54B5F 100%),
+	soft: linear-gradient(42.01deg, map-get($main, regular) 14.33%, map-get($main, regular) 51.39%, #7A425E 87.53%),
+	red-rg: linear-gradient(323.35deg, #F0145A 6.7%, #693264 70.36%),
+	super-soft: linear-gradient(228.57deg, map-get($main, regular) 11.93%, map-get($main, regular) 57.17%, #643E72 87.46%),
+	red-text: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%),
+);
+
+@font-face {
+	font-family: 'Montserrat';
+	src: url('../fonts/Montserrat-VariableFont_wght.ttf') format('woff2-variations');
+	font-weight: 100 950;
+	font-stretch: 75% 125%;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Montserrat';
+	src: url('../fonts/Montserrat-Italic-VariableFont_wght.ttf') format('woff2-variations');
+	font-weight: 100 950;
+	font-stretch: 75% 125%;
+	font-style: italic;
+}
+
+;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.container {
+	max-width: 1440px;
+	width: 100%;
+	margin: 0 auto;
+
+	.uik-header {
+		font-family: Montserrat, sans-serif;
+		max-width: 1440px;
+		width: 100%;
+
+		.main-header-text {
+			font-style: normal;
+			font-weight: 700;
+			font-size: 96px;
+			line-height: 117px;
+			color: map-get($main, text);
+		}
+	}
+
+	.main {
+		font-family: Montserrat, sans-serif;
+
+		.header-text {
+			margin-top: 32px;
+			margin-left: 40px;
+			font-style: normal;
+			font-weight: 700;
+			font-size: 21px;
+			line-height: 26px;
+			color: map-get($main, text);
+		}
+
+		.section {
+			// margin-top: 29px;
+			display: flex;
+			justify-content: flex-end;
+			flex-direction: column;
+			align-items: flex-start;
+
+			.color-text {
+				margin-top: 29px;
+				margin-left: 40px;
+				font-style: normal;
+				font-weight: 700;
+				font-size: 16px;
+				line-height: 20px;
+				color: map-get($main, text);
+			}
+
+			.colors {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+
+				.main-color {
+					display: flex;
+					flex-direction: row;
+					align-items: flex-start;
+
+					.container {
+						display: flex;
+						flex-direction: column;
+						justify-content: center;
+						align-items: center;
+						margin-left: 20px;
+
+						.square100x100 {
+							margin-top: 20px;
+							margin-left: 20px;
+							width: 200px;
+							height: 200px;
+
+							&.color-main-regular {
+								background: map-get($main, regular);
+							}
+
+							&.color-main-alt {
+								background: map-get($main, alt);
+							}
+
+							&.color-main-soft {
+								background: map-get($main, soft);
+							}
+
+							&.color-assets-regular {
+								background: map-get($accent, regular);
+							}
+
+							&.color-active-regular {
+								background: map-get($active, regular);
+							}
+
+							&.color-hover {
+								background: map-get($active, hover);
+							}
+
+							&.color-active {
+								background: map-get($active, active);
+							}
+
+							&.color-gray-regular {
+								background: map-get($grey, regular);
+							}
+
+							&.color-gray-alt {
+								background: map-get($grey, alt);
+							}
+
+							&.color-gray-text {
+								background: map-get($grey, text);
+							}
+
+							&.color-gray-separator {
+								background: map-get($grey, separator);
+							}
+
+							&.color-gradient-regular {
+								background: map-get($gradient, regular);
+							}
+
+							&.color-gradient-soft {
+								background: map-get($gradient, soft);
+							}
+
+							&.color-gradient-red {
+								background: map-get($gradient, red-rg);
+							}
+
+							&.color-gradient-supersoft {
+								background: map-get($gradient, super-soft);
+							}
+
+							&.color-gradient-redtext {
+								background: map-get($gradient, red-text);
+							}
+						}
+
+						.name-color {
+							width: 100px;
+							font-style: normal;
+							font-weight: 400;
+							font-size: 13px;
+							line-height: 20px;
+							text-align: center;
+							color: map-get($main, text);
+							margin-left: 20px;
+							margin-top: 20px;
+							margin-bottom: 50px;
+						}
+					}
+				}
+
+			}
+		}
+
+		.section-text {
+			font-family: Montserrat, sans-serif;
+			margin-top: 101px;
+			margin-left: 40px;
+
+			.h1-text {
+				font-style: normal;
+				font-weight: 700;
+				font-size: 21px;
+				line-height: 26px;
+				color: map-get($main, text);
+				margin-bottom: 29px;
+			}
+
+			.frame {
+				margin-top: 18px;
+				width: 1227px;
+
+				&.top-none {
+					margin-top: none;
+					margin-bottom: none;
+				}
+
+				&.order-top {
+					margin-top: 53px;
+				}
+
+				&.link-top {
+					margin-top: 63px;
+				}
+
+				.h2-Hero {
+					font-style: normal;
+					font-weight: 700;
+					font-size: 21px;
+					line-height: 26px;
+					color: map-get($main, text);
+					margin-bottom: 9px;
+				}
+
+				.h1-g-red-text {
+					font-style: normal;
+					font-weight: 700;
+					font-size: 38px;
+					line-height: 46px;
+					/* Gradient / Red Text */
+					background: map-get($gradient, red-text);
+					-webkit-background-clip: text;
+					-webkit-text-fill-color: transparent;
+					background-clip: text;
+					text-fill-color: transparent;
+				}
+
+				.h2-main-regular {
+					font-style: normal;
+					font-weight: 700;
+					font-size: 30px;
+					line-height: 37px;
+					/* Main / Regular */
+					color: map-get($main, regular);
+				}
+
+				.h3-main-regular {
+					font-style: normal;
+					font-weight: 700;
+					font-size: 22px;
+					line-height: 27px;
+					/* Main / Regular */
+					color: map-get($main, regular);
+				}
+
+				.h3-main-regular-caps {
+					font-style: normal;
+					font-weight: 700;
+					font-size: 14px;
+					line-height: 17px;
+					letter-spacing: 1px;
+					text-transform: uppercase;
+					/* Main / Regular */
+					color: map-get($main, regular);
+				}
+
+				.h4-text {
+					font-style: normal;
+					font-weight: 700;
+					font-size: 16px;
+					line-height: 20px;
+					/* Main / Regular */
+					color: map-get($main, regular);
+				}
+
+				.h4-text-norm {
+					font-style: normal;
+					font-weight: 400;
+					font-size: 16px;
+					line-height: 26px;
+					/* Black */
+					color: #000000;
+				}
+
+				.ol-li-list,
+				.ul-li-list {
+					margin-left: 36px;
+
+					&::marker {
+						color: map-get($accent, regular);
+					}
+				}
+
+				.link-main-regular {
+					margin-top: 10px;
+					list-style: none;
+					color: map-get($active, regular);
+
+					.h4-text-norm {
+						font-style: normal;
+						font-weight: 400;
+						font-size: 13px;
+						line-height: 20px;
+						color: map-get($main, text);
+					}
+				}
+
+				.link-main-hover {
+					margin-top: 10px;
+					list-style: none;
+					color: map-get($accent, regular);
+
+					.h4-text-norm {
+
+						font-style: normal;
+						font-weight: 400;
+						font-size: 13px;
+						line-height: 20px;
+						color: map-get($main, text);
+
+					}
+				}
+			}
+		}
+
+	}
+}
